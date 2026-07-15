@@ -35,6 +35,7 @@ NFR-2 [Scalability & Delegation]: Mobile directory filtering operations must lev
 An end-to-end, multi-channel business applications platform engineered inside the Microsoft Power Platform ecosystem. Designed around a simulated higher education framework for an Australian institution, this solution addresses data fragmentation, automated case management, and mobile field operations.
 
 **🚀 System Architecture**
+
 The solution maps across three distinct platform layers to deliver automated data insights:
 
 ```
@@ -44,6 +45,7 @@ The solution maps across three distinct platform layers to deliver automated dat
  
 **📊 1. Relational Data Layer (Microsoft Dataverse)**
 <br>
+
 The database architecture shifts away from flat files, deploying a relational star-schema utilizing unmanaged solution containers for structured lifecycle management.
 
 Entity Relationship Model
@@ -63,6 +65,7 @@ Intervention Case (Many-to-One [N:1] Lookup to Student)
 
 **💻 2. Back-Office Desktop Portal (Model-Driven Power App)**
 <br>
+
 Designed as a high-density administrative desk for university Academic Advisors to review profiles, manage operations, and analyze student health records.
 
 **Key Technical Implementations:**
