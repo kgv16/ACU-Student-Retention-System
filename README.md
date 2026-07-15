@@ -25,6 +25,7 @@ NFR-1 [Data Security & Privacy]: In compliance with university privacy policies,
 NFR-2 [Scalability & Delegation]: Mobile directory filtering operations must leverage fully delegable Power Fx queries to ensure maximum processing performance on the Dataverse cloud server as student rows grow.
 
 <br>
+<br>
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -42,6 +43,7 @@ The solution maps across three distinct platform layers to deliver automated dat
 ```
  
 **📊 1. Relational Data Layer (Microsoft Dataverse)**
+<br>
 The database architecture shifts away from flat files, deploying a relational star-schema utilizing unmanaged solution containers for structured lifecycle management.
 
 Entity Relationship Model
@@ -57,12 +59,14 @@ Intervention Case (Many-to-One [N:1] Lookup to Student)
 
 <br>
 <br>
+<br>
 
 **💻 2. Back-Office Desktop Portal (Model-Driven Power App)**
+<br>
 Designed as a high-density administrative desk for university Academic Advisors to review profiles, manage operations, and analyze student health records.
 
 **Key Technical Implementations:**
-
+<br>
 Custom public layout view filtering (Active ACU Students View) with integrated system sequencing column logic.
 
 Relational Subgrids: Form layout cards embedding dynamic grids that isolate and display course performance data contextually on individual student forms.
@@ -73,15 +77,18 @@ Relational Subgrids: Form layout cards embedding dynamic grids that isolate and 
 Portal App
 
 <br>
+<br>
 
 <img width="1440" height="860" alt="Desktop Advisor Portal App 2" src="https://github.com/user-attachments/assets/6456558a-4cf6-4257-aff4-dbc9233ffd8c" />
 Students Records
 
 <br>
+<br>
 
 <img width="1440" height="861" alt="Desktop Advisor Portal App 3" src="https://github.com/user-attachments/assets/2895e7d5-e8bd-418f-a795-33e8cd5e5de2" />
 Course Enrollment Record
 
+<br>
 <br>
 
 <img width="1440" height="858" alt="Desktop Advisor Portal App 4" src="https://github.com/user-attachments/assets/6bb15392-ad1f-4f7b-85bb-3e1f03f9af46" />
@@ -89,9 +96,12 @@ Intervention Case Ticket automatically being created for a student who have rece
 
 <br>
 <br>
+<br>
 
 
 **🤖 3. Risk Triage Automation (Power Automate Cloud Flow)**
+<br>
+
 An asynchronous background cloud flow constructed to handle automated system evaluations.
 
 Trigger: Dataverse row update payload monitoring Course Enrolments.
@@ -102,12 +112,14 @@ Action Logic: Dynamically creates a new record inside the Intervention Cases tab
 ```
 /acu_acustudents(@{triggerOutputs()?['body/_acu_student_value']})
 ```
+<br>
 
 
 📸 [POWER AUTOMATE LOGIC FLOW DIAGRAM SCREENSHOT]
 
 <img width="1440" height="857" alt="Power Automate Cloud Flow Diagram" src="https://github.com/user-attachments/assets/aeb2bf49-a998-4769-b453-a45d45318b6d" />
 
+<br>
 <br>
 <br>
 
@@ -147,6 +159,7 @@ Reset(TextInput2)
 ```
 
 <br>
+<br>
 
 📸 [MOBILE ADVISOR APP SEARCH & DETAILS SCREEN SCREENSHOTS]
 
@@ -156,11 +169,13 @@ Students with marks below 50 are highlighted as ‘AT RISK’. For large number 
 
  <br>
 
+
 <img width="1440" height="855" alt="Mobile Advisor App 2" src="https://github.com/user-attachments/assets/d617f4c4-d902-4f7c-9cc4-182ba6771177" />
 
 Student details along with enrolled units and mid-sem marks are displayed on this screen. Field advisors can put in their notes when meeting with the students on campus. 
  
 <br>
+
 
 <img width="1440" height="855" alt="Mobile Advisor App 4" src="https://github.com/user-attachments/assets/36857673-1862-483a-8b05-c32fc89f67ff" />
 
@@ -174,6 +189,8 @@ Advisory notes saved in intervention case ticket in backend portal with audit tr
 
 <br>
 <br>
+<br>
+
 
 **🔐 5. Governance & Data Security**
 Role-based access controls (RBAC) configured via the Power Platform security matrix interface to handle information filtering:
