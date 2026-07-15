@@ -125,6 +125,8 @@ Action Logic: Dynamically creates a new record inside the Intervention Cases tab
 
 
 **📱 4. Mobile Field Activity App (Canvas Power App)**
+<br>
+
 A pixel-perfect smartphone application engineered using Phone Format layouts, empowering advisors to remain mobile while navigating campuses.
 
 Key Power Fx Implementation Highlights:
@@ -193,6 +195,8 @@ Advisory notes saved in intervention case ticket in backend portal with audit tr
 
 
 **🔐 5. Governance & Data Security**
+<br>
+
 Role-based access controls (RBAC) configured via the Power Platform security matrix interface to handle information filtering:
 
 ACU Professor Role: Read permissions assigned to student rows, full write rights allocated to grade columns, complete masking (none) applied to the intervention system.
