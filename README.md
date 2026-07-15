@@ -56,13 +56,11 @@ Intervention Case (Many-to-One [N:1] Lookup to Student)
 
 
 
-
-
-
 💻 2. Back-Office Desktop Portal (Model-Driven Power App)
 Designed as a high-density administrative desk for university Academic Advisors to review profiles, manage operations, and analyze student health records.
 
 Key Technical Implementations:
+
 Custom public layout view filtering (Active ACU Students View) with integrated system sequencing column logic.
 
 Relational Subgrids: Form layout cards embedding dynamic grids that isolate and display course performance data contextually on individual student forms.
@@ -95,8 +93,10 @@ Trigger: Dataverse row update payload monitoring Course Enrolments.
 Condition Logic: Evaluates Mid-Sem Mark against an integer parameter < 50.
 
 Action Logic: Dynamically creates a new record inside the Intervention Cases table using manual OData relational path parsing:
-
+```
 /acu_acustudents(@{triggerOutputs()?['body/_acu_student_value']})
+```
+
 
 
 📸 [POWER AUTOMATE LOGIC FLOW DIAGRAM SCREENSHOT]
@@ -110,17 +110,20 @@ Action Logic: Dynamically creates a new record inside the Intervention Cases tab
 A pixel-perfect smartphone application engineered using Phone Format layouts, empowering advisors to remain mobile while navigating campuses.
 
 Key Power Fx Implementation Highlights:
+
 Delegable Search Architecture: Optimized database queries utilizing server-side filtering logic:
+```powerapps
+Search('ACU Students', TextInput1.Text, acu_fullname) 
+```
 
-
-Search('ACU Students', TextInput1.Text, acu_fullname)
 Optimized State Navigation: Leveraged global state parameters (Set) on gallery transitions to eliminate client-side parsing bottlenecks:
-
-
+```powerapps
 Set(SelectedStudentID, ThisItem.acu_acustudentid); Navigate('Detailed Screen', ScreenTransition.Cover)
+```
+
 Advanced Database Patching & Auditing: Custom database entry command utilizing the Patch function combined with system environment variables to create an incremental audit log file without field bloat:
 
-
+```powerapps
 Patch(
     'Intervention Cases',
     LookUp('Intervention Cases', Student.acu_acustudentid = SelectedStudentID && 'Case Status' = 'Case Status (Intervention Cases)'.New),
@@ -133,7 +136,7 @@ Patch(
 );
 Notify("Notes successfully appended with timestamp!", NotificationType.Success);
 Reset(TextInput2)
-
+```
 
 
 📸 [MOBILE ADVISOR APP SEARCH & DETAILS SCREEN SCREENSHOTS]
