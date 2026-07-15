@@ -57,6 +57,7 @@ Intervention Case (Many-to-One [N:1] Lookup to Student)
 
 
 
+
 💻 2. Back-Office Desktop Portal (Model-Driven Power App)
 Designed as a high-density administrative desk for university Academic Advisors to review profiles, manage operations, and analyze student health records.
 
@@ -70,14 +71,19 @@ Relational Subgrids: Form layout cards embedding dynamic grids that isolate and 
 <img width="1440" height="861" alt="Desktop Advisor Portal App" src="https://github.com/user-attachments/assets/705ae705-3985-4778-9443-419457cde450" />
 Portal App
 
+
 <img width="1440" height="860" alt="Desktop Advisor Portal App 2" src="https://github.com/user-attachments/assets/6456558a-4cf6-4257-aff4-dbc9233ffd8c" />
 Students Records
+
 
 <img width="1440" height="861" alt="Desktop Advisor Portal App 3" src="https://github.com/user-attachments/assets/2895e7d5-e8bd-418f-a795-33e8cd5e5de2" />
 Course Enrollment Record
 
+
 <img width="1440" height="858" alt="Desktop Advisor Portal App 4" src="https://github.com/user-attachments/assets/6bb15392-ad1f-4f7b-85bb-3e1f03f9af46" />
 Intervention Case Ticket automatically being created for a student who have received less than 50 mid-sem marks. 
+
+
 
 
 🤖 3. Risk Triage Automation (Power Automate Cloud Flow)
@@ -89,13 +95,13 @@ Condition Logic: Evaluates Mid-Sem Mark against an integer parameter < 50.
 
 Action Logic: Dynamically creates a new record inside the Intervention Cases table using manual OData relational path parsing:
 
-
 /acu_acustudents(@{triggerOutputs()?['body/_acu_student_value']})
 
 
 📸 [POWER AUTOMATE LOGIC FLOW DIAGRAM SCREENSHOT]
 
 <img width="1440" height="857" alt="Power Automate Cloud Flow Diagram" src="https://github.com/user-attachments/assets/aeb2bf49-a998-4769-b453-a45d45318b6d" />
+
 
 
 
@@ -112,7 +118,6 @@ Optimized State Navigation: Leveraged global state parameters (Set) on gallery t
 
 Set(SelectedStudentID, ThisItem.acu_acustudentid); Navigate('Detailed Screen', ScreenTransition.Cover)
 Advanced Database Patching & Auditing: Custom database entry command utilizing the Patch function combined with system environment variables to create an incremental audit log file without field bloat:
-
 
 
 Patch(
@@ -136,12 +141,14 @@ Reset(TextInput2)
 <img width="1440" height="858" alt="Mobile Advisor App 1" src="https://github.com/user-attachments/assets/a916e8b7-814e-4860-90d8-cba1fcb5c1af" />
 
 Students with marks below 50 are highlighted as ‘AT RISK’. For large number of records and faster retrieval, user can search via student name or student id in the search box.
+
  
 
 <img width="1440" height="855" alt="Mobile Advisor App 2" src="https://github.com/user-attachments/assets/d617f4c4-d902-4f7c-9cc4-182ba6771177" />
 
 Student details along with enrolled units and mid-sem marks are displayed on this screen. Field advisors can put in their notes when meeting with the students on campus. 
  
+
 
 <img width="1440" height="855" alt="Mobile Advisor App 4" src="https://github.com/user-attachments/assets/36857673-1862-483a-8b05-c32fc89f67ff" />
 
