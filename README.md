@@ -36,7 +36,6 @@ An end-to-end, multi-channel business applications platform engineered inside th
 The solution maps across three distinct platform layers to deliver automated data insights:
 
 
-
 [Dataverse Database] ──> [Model-Driven App] ──> [Power Automate Flow] ──> [Canvas Mobile App]
  (Relational Tables)     (Advisor Portal)    (Automated Risk Check)     (Mobile Advisor Hub)
 
@@ -54,6 +53,8 @@ Intervention Case (Many-to-One [N:1] Lookup to Student)
 📸 [ ERD CANVAS DIAGRAM SCREENSHOT]
 
 <img width="1440" height="900" alt="ERD Diagram" src="https://github.com/user-attachments/assets/2f5349e3-6430-4c90-9fff-c0e081b55be1" />
+
+
 
 
 
