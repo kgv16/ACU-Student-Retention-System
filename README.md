@@ -49,7 +49,7 @@ Intervention Case (Many-to-One [N:1] Lookup to Student)
 
 📸 [ ERD CANVAS DIAGRAM SCREENSHOT]
 
-![ERD Canvas Diagram](ERD Diagram.png)
+![ERD Canvas Diagram](ERD-Diagram.png)
 
 💻 2. Back-Office Desktop Portal (Model-Driven Power App)
 Designed as a high-density administrative desk for university Academic Advisors to review profiles, manage operations, and analyze student health records.
